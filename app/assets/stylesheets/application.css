@@ -14,3 +14,190 @@
  *= require_self
  */
 
+body {
+  font-family: 'Lato', sans-serif;
+}
+body {
+  margin: 0;
+}
+
+img {
+  height: 50px;
+}
+
+#logo {
+  height: 20px;
+}
+
+.row {
+  display: inline;
+    
+}
+
+
+
+.jumbotron {
+  text-align: center;
+  color: #fff;
+  background: url('https://goo.gl/zryxfz') no-repeat center center;
+  background-size: cover;
+  height: 500px;
+}
+
+.jumbotron h1 {
+  font-weight: 700;
+  margin-top: 125px;
+    text-transform: uppercase;
+}
+
+.jumbotron p {
+    font-weight: 300;
+}
+
+.btn {
+  text-decoration: none;
+  border-radius: 0px;
+  color: #fff;
+}
+
+.btn-search {
+  background-color: #ff5a5f;
+  color: #fff;
+  border: none;
+}
+
+#btn-how {
+  border: none;
+  padding: 15px 10px;
+  background: rgba(255, 255, 255, .4);
+  color: #fff;
+}
+
+.user-input {
+  text-align: center;
+
+}
+
+.form-control {
+  border-radius: 0px;
+}
+
+.welcome {
+	margin-top: 69px;
+	background: rgba(105, 105, 105, .5);
+	padding: 25px 10px;
+    
+}
+
+
+#learn {
+	width: 225px;
+}
+
+/* .errors li {
+  display: inline-block;
+  color: red;
+} */
+
+.btn-login {
+  background-color: #ff5a5f;
+  color: #fff;
+  border: none;
+}
+
+.footer {
+  background-image: url("https://41.media.tumblr.com/af52bf6d5f0f792d97e37ba498fb21da/tumblr_nrklyej7Sx1qlcwy7o1_1280.jpg");
+  color: #fff;
+  padding: 40px 0 20px 0;
+  text-align: center;
+    height: 300px;
+}
+
+.footer h3 {
+  font-size: 20px;
+  font-weight: bold;
+    padding-top: 50px;
+}
+
+.footer ul {
+  padding: 0;
+  list-style: none;
+  margin-bottom: 20px;
+
+}
+
+.footer li {
+  font-size: inherit;
+    display: inline-block;
+    margin: 10px;
+}
+
+
+.jumbotron-about {
+  text-align: center;
+  color: #fff;
+  background: url('https://goo.gl/BdeJuM') no-repeat center center;
+  background-size: cover;
+  height: 300px;
+}
+
+.jumbotron-about h1 {
+  font-weight: 700;
+  margin-top: 100px;
+    text-transform: capitalize;
+    font-size: 50px;
+}
+
+.about-head h4 {
+    text-align: center;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: 50px;
+}
+
+.container-about p {
+    font-size: 25px;
+    line-height: 50px;
+    font-weight: 100px;
+}
+
+.container {
+    padding-bottom: 50px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+
+.form-control {
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+  box-shadow: none;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 1px solid #acacac;
+  margin-bottom: 15px;
+}
+
+www.racefurniture.com.au/media="all"
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: black;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+

@@ -1,0 +1,15 @@
+<!-- navbar -->
+<%= render 'nav' %>
+<!-- navbar -->
+
+<div class="user-input">
+	<div class="container">
+		<div class="login">
+			<%= form_for(:session, url: login_path) do |f| %>
+				<%= f.email_field :email, :placeholder => "Enter your email" %> <br>
+				<%= f.password_field :password, :placeholder => "Enter password" %> <br>
+				<%= f.submit "Login", :class => "btn-login" %>
+			<% end %>
+		</div>
+	</div>
+</div>

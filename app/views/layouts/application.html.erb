@@ -1,37 +1,57 @@
 <!DOCTYPE html>
-<html>
 <head>
-  <title>CodeLearner</title>
+  <title>{ko}Learn</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-</head>
-<body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
 
-<div class="header">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-9">
-       <!-- <%= link_to image_tag("https://goo.gl/Zuwik9", :border => 0), {:action => 'welcome', :controller => 'pages'} %> -->
-      </div>
-      <div class="col-md-3">
-        <% if current_user %>
-          <ul>
-            <li>Welcome, <%= current_user.first_name %></li>
-            <li><%= link_to "Log out", logout_path, method: "delete" %></li>
-            <% else %>
-          </ul>
-          <ul>
-            <li><%= link_to "Log in", '/login' %></li>
-            <li><%= link_to "Sign Up", '/signup' %></li>
-          </ul>
-        <% end %>
-      </div>
-    </div>
+ <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+ <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+ <%= csrf_meta_tags %>
+</head>
+
+<body>
+    
+  <% if flash[:notice] %>
+  <div id="notice">
+    <%= flash[:notice] %> 
   </div>
-</div>
+  <% end %>
+
+
+
 
 <%= yield %>
+    
 
+  <!--  Footer Area-->
+    <div class="footer">
+      <div class="container">
+          <h3>Company</h3>
+          <ul>
+              <li>About</li>
+              <li>Careers</li>
+              <li>Blog</li>
+              <li>Help</li>
+              <li>Policies</li>
+              <li>Terms & Privacy</li>
+        </ul>
+        <p>&copy; 2015 <img src="https://36.media.tumblr.com/59f6145c43c8897ef734255b47091db3/tumblr_nrkgqmk1CF1qlcwy7o1_r1_1280.png" id="logo" /></p>
+      </div>
+    </div>
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
 </body>
 </html>

@@ -1,3 +1,55 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.col-md-3 {
+   float: right;
+    
+}
+.top .ul {
+    display:inline;
+}
+
+.top li {
+    display: inline;
+    padding: 8px;
+    margin: 10px;
+    margin-left: 0px;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.top ul {
+  margin-top: 10px;
+    cursor: pointer;
+
+    
+}
+
+.top .dropdown  {
+  position: relative;
+}
+
+.top .dropdown-menu ul {
+  position: absolute;
+  top: 20px;
+  border-radius: 0;
+    
+}
+
+.top .dropdown-menu li {
+  display: block;
+  margin: 0;
+  padding: 3px 10px;
+ 
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+/* The navbar css below */
