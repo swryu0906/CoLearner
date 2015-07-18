@@ -1,35 +1,5 @@
 <div class='container text-center'>
-  <h1>Listing Courses</h1>
-
-  <table class='table table-hover text-center'>
-    <thead>
-      <tr>
-        <th class='text-center'>ID</th>
-        <th class='text-center'>Name</th>
-        <th class='text-center'>Category</th>
-        <th class='text-center'>City name</th>
-        <th class='text-center'>Description</th>
-        <th class='text-center' colspan="3"></th>
-      </tr>
-      </thead>
-
-    <tbody>
-      <% @courses.each do |course| %>
-        <tr>
-          <td><%= course.id %></td>
-          <td><%= course.name %></td>
-          <td><%= course.category.name %></td>
-          <td><%= course.city_name %></td>
-          <td><%= course.description %></td>
-          <td><%= link_to 'Show', course %></td>
-          <td><%= link_to 'Edit', edit_course_path(course) %></td>
-          <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-  <br>
+  <%= render 'courses/table' %>
 
   <%= link_to 'New Course', new_course_path %>
 

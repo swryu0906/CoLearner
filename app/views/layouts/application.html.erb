@@ -21,16 +21,20 @@
 
 <body>
 
-  <!-- Header nav -->
-  <%= render 'layouts/nav' %>
-  
-  
-  <!-- Flash notice --> 
-  <% if flash[:notice] %>
-  <div id="notice">
-    <%= flash[:notice] %> 
-  </div>
+  <% if current_page?('/') %>
+    <!-- Header nav for all other pages -->
+    <%= render 'layouts/nav' %>
+  <% else %>
+        <!-- Header nav for all other pages -->
+    <%= render 'layouts/nav_root' %>
   <% end %>
+
+  <%= render 'layouts/notice' %>
+  
+  
+  
+  
+
 
 
   <!-- Main section -->
