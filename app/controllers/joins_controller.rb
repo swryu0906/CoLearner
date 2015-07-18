@@ -1,5 +1,6 @@
 class JoinsController < ApplicationController
   before_action :set_join, only: [:show, :edit, :update, :destroy]
+  before_action :set_courses
 
   # GET /joins
   # GET /joins.json
@@ -70,5 +71,9 @@ class JoinsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def join_params
       params.require(:join).permit(:user_id, :event_id)
+    end
+
+    def set_courses
+      @courses = Course.all
     end
 end

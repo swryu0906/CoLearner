@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 20150718071136) do
 
   create_table "courses", force: :cascade do |t|
     t.string   "name"
-    t.string   "category"
     t.string   "city_name"
     t.string   "image"
     t.text     "description"

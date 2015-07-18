@@ -1,7 +1,7 @@
 class CoursesController < ApplicationController
   before_action :set_user
   before_action :set_courses
-  before_action :set_course
+  before_action :set_course, except: [:index, :new, :create]
   # GET /courses
   # GET /courses.json
   def index
