@@ -1,34 +1,44 @@
+<div class='container'>
 
-<p id="notice"><%= notice %></p>
+  <div class="course_profile row">
 
-<p id="#course_name">
-  <strong>Name:</strong>
-  <%= @course.name %>
-</p>
+    <div id="course_<%= @course.id %>" class="course_image col-md-5" %>
+      <img src="<%= @course.image %>" alt="user_<%= @course.id %> image" class="img-responsive img-thumbnail">
+    </div>
 
-<p id="#course_name">
-  <strong>Category:</strong>
-  <%= @course.category %>
-</p>
+    <div class='user_detail col-md-7 text-left'>
+      <h3>This is <%= @course.name %>!</h3>
+      <p>
+        <strong>Name:
+        <%= @course.name %></strong>
+      </p>
 
-<p id="#course_name">
-  <strong>City name:</strong>
-  <%= @course.city_name %>
-</p>
+      <p>
+        <strong>Category:</strong>
+        <%= @course.category.name %>
+      </p>
 
-<p id="#course_name">
-  <strong>Description:</strong>
-  <%= @course.description %>
-</p>
+      <p>
+        <strong>Description:</strong>
+        <%= @course.description %>
+      </p>
 
-<%= link_to 'Edit', edit_course_path(@course) %> |
-<%= link_to 'Back', courses_path %>
+      <p>
+        <strong>City name:</strong>
+        <%= @course.city_name %>
+      </p>
+
+      <%= link_to 'Edit', edit_user_path(@user) %> |
+      <%= link_to 'Back', users_path %>
+    </div>
+
+  </div>
 
 
 
 <div>
- <h2>{ko}sharing{<%= @user.courses.count %>}}
 
+ <h2>{ko}sharing{<%= @user.courses.count %>}}</h2>
  <ul>
    <%= @courses.each do |course| %>
      <li>

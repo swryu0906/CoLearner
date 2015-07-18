@@ -1,7 +1,88 @@
 <div class="container text-center">
   
   <%= render 'courses/table' %>
+  <br>
 
+  <div class="courses row">
+    <% @courses.each do |course| %>
+      <div class="row">
+        <div id="course_<%= course.id %>" class="course col-md-4">
+          <%= link_to course do %>
+            <img src="<%= course.image %>" alt="course_<%= course.id %> image" class="img-responsive img-thumbnail">
+          <% end %>
+          <h4><%= link_to course.name, course %></h4>
+          <p><%= course.category.name %></p>
+          <p><%= course.city_name %></p>
+          <br>
+          <br>
+        </div>
+    
+        <div class="events col-md-8">
+          <table class='table table-hover text-center row'>
+            <thead>
+              <tr>
+                <th class='text-center'>Start time</th>
+                <th class='text-center'>End time</th>
+                <th class='text-center'>Course</th>
+                <th class='text-center' colspan="3"></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% course.events.each do |event| %>
+                <tr>
+                  <td><%= event.start_time %></td>
+                  <td><%= event.end_time %></td>
+                  <td><%= event.course.name %></td>
+                  <td><%= link_to 'Show', course_event_path(course, event) %></td>
+                  <td><%= link_to 'Edit', edit_course_event_path(course, event) %></td>
+                  <td><%= link_to 'Destroy', [course, event], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div> 
+      </div>
+    
+
+    <% end %>
+  </div>
+
+  <!-- Pagination -->
+  <div class="row text-center">
+     <div class="col-lg-12">
+         <ul class="pagination">
+             <li>
+                 <a href="#">&laquo;</a>
+             </li>
+             <li class="active">
+                 <a href="#">1</a>
+             </li>
+             <li>
+                 <a href="#">2</a>
+             </li>
+             <li>
+                 <a href="#">3</a>
+             </li>
+             <li>
+                 <a href="#">4</a>
+             </li>
+             <li>
+                 <a href="#">5</a>
+             </li>
+             <li>
+                 <a href="#">&raquo;</a>
+             </li>
+         </ul>
+     </div>
+  </div>
+
+<!-- End of container -->  
+</div>
+
+
+  <%= link_to 'New Join', new_join_path %>
+  
 
   <h1>Listing Joins</h1>
 
@@ -28,9 +109,6 @@
   </table>
 
   <br>
-
-  <%= link_to 'New Join', new_join_path %>
-  
 </div>
 
 
