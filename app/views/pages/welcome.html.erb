@@ -1,35 +1,50 @@
 <div class="top">
-<div class="col-md-9">
-       <%= link_to image_tag("https://goo.gl/KztxhJ", :border => 0), {:action => 'welcome', :controller => 'pages'} %>
-      </div>
+    <div class="col-md-8">
+        <%= link_to image_tag("https://goo.gl/KztxhJ"), root_path %>
+    </div>
 
-      <div class="col-md-3">
+    <div class="col-md-4">
         <% if current_user %>
-          <ul class="dropdown">
-              <li><%= link_to "Share your Knowledge", '/courses/new' %> <i class="fa fa-share-alt"></i></li>
-            <li>Hey <%= current_user.first_name %> <i class="fa fa-caret-down"></i></li>
-              <ul class="dropdown-menu">
-                  <li><%= link_to "Profile", '/users' %></li>
-                  <li><%= link_to "Your Sharing", '/courses' %></li>
-                  <li><%= link_to "Edit Profile", '/users/1/edit' %></li>
-                   
-              </ul>
-            <li><%= link_to "Log out", logout_path, method: "delete" %></li>
-            <% else %>
-          </ul>
-          <ul>
-            <li><%= link_to "Log in", '/login' %> </li>
-            <li><%= link_to "Sign Up", '/signup' %></li>
-          </ul>
+        <ul>
+          
+                <li class="nav-item"><%= link_to "Share your Knowledge", '/courses/new' %> <i class="fa fa-share-alt"></i></li>
+            
+            <li class="dropdown nav-item">
+                <p>
+                    Hey <%= current_user.first_name %> <i class="fa fa-caret-down"></i>
+                </p>
+            
+                <ul class="dropdown-menu">
+                    <li><%= link_to "Profile", current_user %></li>
+                    <li><%= link_to "Your Sharing", '/courses' %></li>
+                    <li><%= link_to "Edit Profile", '/users/1/edit' %></li>
+
+                </ul>
+            </li>                  
+            <li class="nav-item"><%= link_to "Log out", logout_path, method: "delete" %></li>
+        </ul>
+
+        <% else %>
+
+        <ul>
+            <li class="nav-item">
+                <h3><%= link_to "Share your Knowledge", '/courses/new' %> <i class="fa fa-share-alt"></i></h3>
+            </li>
+
+            <li class="nav-item"><%= link_to "Log in", '/login' %> </li>
+            <li class="nav-item"><%= link_to "Sign Up", '/signup' %></li>
+        </ul>
+
         <% end %>
-      </div>
+
+    </div>
 </div>
 
 <div class="jumbotron">
   <div class="container">
     <h1>Welcome Learner</h1>
     <p>Learn everything you ever wanted. Together.</p>
-    <a href="/courses" class="btn btn-default" id="btn-how">How It Works</a>
+    <a href="#" class="btn btn-default" id="btn-how">How It Works</a>
     
     <div class="welcome user-input">
       <div class="container">
@@ -53,3 +68,117 @@
   
   </div>
 </div>
+
+
+
+
+<!--- Below Jumbotron Area --->
+<div class="panel">
+    <div id="learning-container">
+        <div class="row">  
+            <div class="discovery-section">
+                <div class="section-intro text-center row-space-6 row-space-top-8">
+                    <h2 class="row-space-1">
+                        <strong>Learn Something New</strong>
+                    </h2>
+                    <p class="text-lead">
+                        Never Stop Discovering. Never Stop Learning.
+                    </p>
+             
+            </div>
+        </div>
+        <div class="discover-photos">
+        <div class="row">
+             <div class="col-sm-6 col-md-4">
+                 <div class="thumbnail text-center">
+                     <img src="https://41.media.tumblr.com/2ff3ccd3aa7a69425ffa5df5d1a7ecf4/tumblr_nrlrl3qaPW1qlcwy7o6_400.png" alt="...">
+                     <div class="h2">
+                                                <strong>
+              Learn js in Philadelphia
+            </strong>
+                 </div>
+             </div>
+            </div>
+                 <div class="col-sm-6 col-md-4">
+                 <div class="thumbnail text-center">
+                     <img src="https://40.media.tumblr.com/114f4be73d6eadb4ee586a050b0d56a6/tumblr_nrlrl3qaPW1qlcwy7o4_400.png" alt="...">
+                     <div class="h2">
+                                                <strong>
+              Learn HTML in Miami
+            </strong>
+                 </div>
+             </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                 <div class="thumbnail text-center">
+                     <img src="https://40.media.tumblr.com/aa18eb4fe799572eb91575fc6832b841/tumblr_nrlrl3qaPW1qlcwy7o5_400.png" alt="...">
+                     <div class="h2">
+                                                <strong>
+              Learn CSS in Austin
+            </strong>
+                 </div>
+             </div>
+        </div>
+    </div>
+        </div>
+</div>
+</div>
+    <div class="discovery-section">
+                <div class="section-intro text-center row-space-6 row-space-top-8">
+                    <h2 class="row-space-1">
+                        <strong>Learn from the World</strong>
+                    </h2>
+                    <p class="text-lead">
+                        Never Stop Discovering. Never Stop Learning.
+                    </p>
+             
+            </div>
+        </div>
+    <div class="row">
+        <div class="col-md-offset-4 col-md-4 text-center">
+            <a href="/courses" class="btn-more btn-default btn-search">
+          Explore More
+            </a>
+        </div>
+ 
+</div>
+</div>
+
+<div class="discover-world">
+        <div class="row">
+             <div class="col-sm-3 col-md-4">
+                 <div class="thumbnail text-center">
+                     <img src="https://40.media.tumblr.com/9a9a6096cd5fdb95de8f632193c53e4c/tumblr_nrlrl3qaPW1qlcwy7o3_400.png" alt="...">
+                     <div class="h2">
+                                                <strong>
+              Learn js in Montreal
+            </strong>
+                 </div>
+             </div>
+            </div>
+                 <div class="col-sm-3 col-md-4">
+                 <div class="thumbnail text-center">
+                     <img src="https://40.media.tumblr.com/9a9a6096cd5fdb95de8f632193c53e4c/tumblr_nrlrl3qaPW1qlcwy7o3_400.png" alt="...">
+                     <div class="h2">
+                                                <strong>
+              Learn HTML in New York
+            </strong>
+                 </div>
+             </div>
+            </div>
+            <div class="col-sm-3 col-md-4">
+                 <div class="thumbnail text-center">
+                     <img src="https://40.media.tumblr.com/9a9a6096cd5fdb95de8f632193c53e4c/tumblr_nrlrl3qaPW1qlcwy7o3_400.png" alt="...">
+                     <div class="h2">
+                                                <strong>
+              Learn CSS in Boston
+            </strong>
+                 </div>
+             </div>
+        </div>
+    </div>
+        </div>
+
+ 
+
+

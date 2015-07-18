@@ -17,10 +17,14 @@
 
 var main = function() {
     $('.dropdown').click(function() {
-        $('.dropdown-menu').hide();
-        $(this).find('.dropdown-menu').toggle(500);
-       
+        var selectedMenu = $(this).find('.dropdown-menu');
+        
+        if(selectedMenu.is(':hidden')) {
+            $('.dropdown-menu').hide();
+        };
+        
+        selectedMenu.toggle();
 });
-}
+};
 
 $(document).ready(main);

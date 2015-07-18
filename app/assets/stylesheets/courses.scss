@@ -69,3 +69,77 @@
 .col-md-3 ul {
     display: inherit;
 }
+
+
+#course_name {
+  padding: 15px 18px;
+  font-size: 15px;
+  margin: 10px;
+  display: inline-block;
+  color: black;
+  border: 2px inset;
+  text-align: left;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  line-height: 1.3;
+-webkit-font-smoothing: antialiased;
+}
+
+#course_category {
+   padding: 15px 18px;
+  font-size: 15px;
+  margin: 10px;
+  display: inline-block;
+  color: black;
+  border: 2px inset;
+  text-align: left;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  line-height: 1.3;
+-webkit-font-smoothing: antialiased;
+  
+}
+
+#course_city_name {
+   padding: 15px 18px;
+  font-size: 15px;
+  margin: 10px;
+  display: inline-block;
+  color: black;
+  border: 2px inset;
+  text-align: left;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+-webkit-font-smoothing: antialiased;
+}
+
+#course_description {
+   padding: 15px 18px;
+  font-size: 15px;
+  margin: 10px;
+  display: inline-block;
+  color: black;
+  border: 2px inset;
+  text-align: left;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  line-height: 1.3;
+-webkit-font-smoothing: antialiased;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  padding: 15px 18px;
+  margin: 10px;
+  display: inline-block;
+  color: #fff;
+  border: 1px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  background-color: #d00a88  ;
+}

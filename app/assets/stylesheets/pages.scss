@@ -27,22 +27,29 @@
     
 }
 
-.top .dropdown  {
+.top .dropdown2  {
   position: relative;
 }
 
-.top .dropdown-menu ul {
+.top .dropdown-menu2 {
   position: absolute;
   top: 20px;
   border-radius: 0;
     
 }
 
-.top .dropdown-menu li {
+.top .dropdown-menu2 li {
   display: block;
   margin: 0;
   padding: 3px 10px;
  
+}
+.nav-item {
+    display: inline;
+}
+
+.dropdown p {
+    display: inline;
 }
 
 a {
@@ -51,5 +58,40 @@ a {
 }
 
 
+/* Discovery Section CSS */
 
-/* The navbar css below */
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: none;
+  border-radius: 4px;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.row {
+    display: inline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

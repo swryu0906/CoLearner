@@ -1,27 +1,101 @@
 <!-- navbar -->
 <%= render 'nav' %>
 <!-- navbar -->
+
 <p id="notice"><%= notice %></p>
 
-<p>
+<p id="#course_name">
   <strong>Name:</strong>
   <%= @course.name %>
 </p>
 
-<p>
+<p id="#course_name">
   <strong>Category:</strong>
   <%= @course.category %>
 </p>
 
-<p>
+<p id="#course_name">
   <strong>City name:</strong>
   <%= @course.city_name %>
 </p>
 
-<p>
+<p id="#course_name">
   <strong>Description:</strong>
   <%= @course.description %>
 </p>
 
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>
+
+
+ <div class="container">
+   <div class="row">
+     <div class="col-md-2">
+         <!-- src will be replaced by @user.image -->
+         <img id="avatar" src="https://40.media.tumblr.com/cb44b6465ba4cd77144c72ee857bb9bc/tumblr_nrlrv61IPK1qlcwy7o8_400.png" alt="user profile image">
+     </div>
+
+     <div class ="col-md-10">
+         <h2>Hi I'm <%= @user.first_name %>!</h2>
+         <p>Member since <%= @user.created_at %></p>
+         <p>Description</p>
+         <p><%= @user.description %></p>
+     </div>
+     <textarea class="form-control" rows="3"></textarea>
+   </div>
+ </div>
+
+<div>
+ <h2>{ko}sharing{<%= @user.courses.count %>}}
+
+ <ul>
+   <%= @courses.each do |course| %>
+     <li>
+       <%= link_to course do %>
+         <div>
+           <h3><%= course.name %></h3>
+           <p><%= course.category %></p>
+           <p><%= course.description %></p>
+           <p><%= course.city_name %></p>
+         </div>
+       <% end %>
+     </li>
+   <% end %>
+ </ul>
+
+ <% if @courses.size == 0 %>
+   <em>No courses found.</em>
+ <% end %>
+
+</div>
+
+<h2>{ko}sharing {@user.joins.count}</h2>
+<div class="container">
+ <div class="row">
+       <!-- classes being shared -->
+     <div class="col-md-4">
+         <img src="https://40.media.tumblr.com/9c53b52071e925ad0dfeee58a5e57d3e/tumblr_nrlrv61IPK1qlcwy7o1_400.png" alt="sharing_course_1"><p>HTML for beginners</p>
+
+     </div>
+     <div class="col-md-4">
+         <img src="https://40.media.tumblr.com/e3175d4ccd3438fed68d656ee71dc939/tumblr_nrlrv61IPK1qlcwy7o2_400.png" alt="sharing_course_2"><p>Basics of JavaScript</p>
+     </div>
+     <div class="col-md-4">
+         <img src="https://36.media.tumblr.com/0d7a80f4ae371168408791aa100d0833/tumblr_nrlrv61IPK1qlcwy7o3_400.png" alt="sharing_course_2"><p>CSS for developers</p>
+     </div>
+ </div>
+</div>
+
+<h2>{ko}learning {@user.joins.count}</h2>
+ <div class="container">
+   <div class="row">
+ <!-- replace 3 to @user.joins.count -->
+
+       <div class="col-md-4"><img src="https://41.media.tumblr.com/34ec2cfbbe94bce714a0e1c93d58ffee/tumblr_nrlrv61IPK1qlcwy7o4_400.png" alt="joined_course_1"><p>JavaScript for developers</p>
+       </div>
+       <div class="col-md-4"><img src="https://41.media.tumblr.com/bb55f726b516d265cea55747aa0783dd/tumblr_nrlrv61IPK1qlcwy7o5_400.png" alt="joined_course_2"><p>Basics of Angular.JS</p>
+       </div>
+       <div class="col-md-4"><img src="https://40.media.tumblr.com/6beae8f18ed5fd32f1d713fc6c1a66bd/tumblr_nrlrv61IPK1qlcwy7o6_400.png" alt="joined_course_3"><p>Beginner Python</p>
+       </div>
+   </div>
+ </div>

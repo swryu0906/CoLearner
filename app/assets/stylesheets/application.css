@@ -61,14 +61,16 @@ img {
 }
 
 .btn-search {
-  background-color: #ff5a5f;
+  background-color: #d00a88;
+    padding: 15px 20px;
+    margin: 0 auto;
   color: #fff;
   border: none;
 }
 
 #btn-how {
   border: none;
-  padding: 15px 10px;
+  padding: 19px 10px;
   background: rgba(255, 255, 255, .4);
   color: #fff;
 }
@@ -83,8 +85,8 @@ img {
 }
 
 .welcome {
-	margin-top: 69px;
-	background: rgba(105, 105, 105, .5);
+	margin-top: 25px;
+	/*background: rgba(105, 105, 105, .5);*/
 	padding: 25px 10px;
     
 }
@@ -177,7 +179,7 @@ img {
   border-right: 0;
   border-left: 0;
   border-bottom: 1px solid #acacac;
-  margin-bottom: 15px;
+  margin-bottom: -10px;
 }
 
 www.racefurniture.com.au/media="all"

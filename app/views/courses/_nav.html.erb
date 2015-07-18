@@ -1,26 +1,41 @@
 <div class="navbar">
-<div class="col-md-9">
-       <%= link_to image_tag("https://goo.gl/Zuwik9", :border => 0), {:action => 'welcome', :controller => 'pages'} %>
-      </div>
+    <div class="col-md-8">
+        <%= link_to image_tag("https://goo.gl/Zuwik9"), root_path %>
+    </div>
 
-      <div class="col-md-3">
+    <div class="col-md-4">
         <% if current_user %>
-          <ul class="dropdown">
-              <li><%= link_to "Share your Knowledge", '/courses/new' %> <i class="fa fa-share-alt"></i></li>
-            <li>Hey <%= current_user.first_name %> <i class="fa fa-caret-down"></i></li>
-              <ul class="dropdown-menu">
-                  <li><%= link_to "Profile", '/users' %></li>
-                  <li><%= link_to "Your Sharing", '/courses' %></li>
-                  <li><%= link_to "Edit Profile", '/users/1/edit' %></li>
-                   
-              </ul>
-            <li><%= link_to "Log out", logout_path, method: "delete" %></li>
-            <% else %>
-          </ul>
-          <ul>
-            <li><%= link_to "Log in", '/login' %> </li>
-            <li><%= link_to "Sign Up", '/signup' %></li>
-          </ul>
+        <ul>
+          
+                <li class="nav-item"><%= link_to "Share your Knowledge", '/courses/new' %> <i class="fa fa-share-alt"></i></li>
+            
+            <li class="dropdown nav-item">
+                <p>
+                    Hey <%= current_user.first_name %> <i class="fa fa-caret-down"></i>
+                </p>
+            
+                <ul class="dropdown-menu">
+                    <li><%= link_to "Profile", current_user %></li>
+                    <li><%= link_to "Your Sharing", '/courses' %></li>
+                    <li><%= link_to "Edit Profile", '/users/1/edit' %></li>
+
+                </ul>
+            </li>                  
+            <li class="nav-item"><%= link_to "Log out", logout_path, method: "delete" %></li>
+        </ul>
+
+        <% else %>
+
+        <ul>
+            <li class="nav-item">
+                <h3><%= link_to "Share your Knowledge", '/courses/new' %> <i class="fa fa-share-alt"></i></h3>
+            </li>
+
+            <li class="nav-item"><%= link_to "Log in", '/login' %> </li>
+            <li class="nav-item"><%= link_to "Sign Up", '/signup' %></li>
+        </ul>
+
         <% end %>
-      </div>
+
+    </div>
 </div>
