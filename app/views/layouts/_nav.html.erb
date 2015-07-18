@@ -1,41 +1,97 @@
-<div class="navbar">
-    <div class="col-md-8">
-        <%= link_to image_tag("https://goo.gl/Zuwik9"), root_path %>
-    </div>
+<% if current_page?('/') %>
+<!-- Header nav for the root page -->
 
-    <div class="col-md-4">
+<header class='navbar navbar-default navbar-static-top root'>
+    <nav class='container' role='navigation'>
+        <div class='navbar-header'>
+            <a href='/' class='navbar-brand'><img src="https://36.media.tumblr.com/59f6145c43c8897ef734255b47091db3/tumblr_nrkgqmk1CF1qlcwy7o1_r1_1280.png" alt="KoLearn logo"></a>
+   
+            <button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='.navbar-collapse'>
+                <span class='sr-only'>Toggle navigation</span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+            </button>
+        </div>
+
         <% if current_user %>
-        <ul>
-          
-                <li class="nav-item"><%= link_to "Share your Knowledge", '/courses/new' %> <i class="fa fa-share-alt"></i></li>
-            
-            <li class="dropdown nav-item">
-                <p>
-                    Hey <%= current_user.first_name %> <i class="fa fa-caret-down"></i>
-                </p>
-            
-                <ul class="dropdown-menu">
-                    <li><%= link_to "Profile", current_user %></li>
-                    <li><%= link_to "Your Sharing", '/courses' %></li>
-                    <li><%= link_to "Edit Profile", '/users/1/edit' %></li>
 
+        <ul class='nav navbar-nav navbar-right collapse navbar-collapse'>
+            <li><%= link_to 'Share your knowledge', new_course_path %></li>
+            <li class='dropdown'>
+                <a href='/about' data-target='#' class='dropdown-toggle' data-toggle='dropdown'>Hey <%= current_user.first_name %> <span class='caret'></span></a>
+                <ul class='dropdown-menu' role='menu'>
+                    <li><%= link_to 'Profile', current_user %></li>
+                    <li><%= link_to 'Your Sharing', courses_path %></li>
+                    <li class='divider'></li>
+                    <li><%= link_to 'Edit Profile', edit_user_path(current_user) %></li>
+                    <li class='divider'></li>
+                    <li><%= link_to 'Contact', "/contact" %></li>
+                    <li><%= link_to 'About', "/about" %></li>
                 </ul>
-            </li>                  
-            <li class="nav-item"><%= link_to "Log out", logout_path, method: "delete" %></li>
+            </li>
+            <li><%= link_to "Log out", logout_path, method: "delete" %></a></li>
         </ul>
 
         <% else %>
 
-        <ul>
-            <li class="nav-item">
-                <h3><%= link_to "Share your Knowledge", '/courses/new' %> <i class="fa fa-share-alt"></i></h3>
-            </li>
-
-            <li class="nav-item"><%= link_to "Log in", '/login' %> </li>
-            <li class="nav-item"><%= link_to "Sign Up", '/signup' %></li>
+        <ul class='nav navbar-nav navbar-right'>
+            <li><%= link_to 'Share your knowledge', '/about' %></li>
+            <li><%= link_to 'Log in', '/login' %></li>
+            <li><%= link_to 'Sign up', '/signup' %></li>
         </ul>
 
         <% end %>
 
-    </div>
-</div>
+    </nav>
+</header>
+
+<% else %>
+<!-- Header nav for all other pages -->
+
+<header class='navbar navbar-default navbar-static-top'>
+    <nav class='container' role='navigation'>
+        <div class='navbar-header'>
+            <a href='/' class='navbar-brand'><img src="https://40.media.tumblr.com/4a460315ec2335a2ed0f63f6c825619d/tumblr_nri53jWkt71uzzsp0o1_1280.png" alt="KoLearn logo"></a>
+   
+            <button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='.navbar-collapse'>
+                <span class='sr-only'>Toggle navigation</span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+            </button>
+        </div>
+
+        <% if current_user %>
+
+        <ul class='nav navbar-nav navbar-right collapse navbar-collapse'>
+            <li><%= link_to 'Share your knowledge', new_course_path %></li>
+            <li class='dropdown'>
+                <a href='/about' data-target='#' class='dropdown-toggle' data-toggle='dropdown'>Hey <%= current_user.first_name %> <span class='caret'></span></a>
+                <ul class='dropdown-menu' role='menu'>
+                    <li><%= link_to 'Profile', current_user %></li>
+                    <li><%= link_to 'Your Sharing', courses_path %></li>
+                    <li class='divider'></li>
+                    <li><%= link_to 'Edit Profile', edit_user_path(current_user) %></li>
+                    <li class='divider'></li>
+                    <li><%= link_to 'Contact', "/contact" %></li>
+                    <li><%= link_to 'About', "/about" %></li>
+                </ul>
+            </li>
+            <li><%= link_to "Log out", logout_path, method: "delete" %></a></li>
+        </ul>
+
+        <% else %>
+
+        <ul class='nav navbar-nav navbar-right'>
+            <li><%= link_to 'Share your knowledge', '/about' %></li>
+            <li><%= link_to 'Log in', '/login' %></li>
+            <li><%= link_to 'Sign up', '/signup' %></li>
+        </ul>
+
+        <% end %>
+
+    </nav>
+</header>
+
+<% end %>

@@ -8,12 +8,12 @@ class User < ActiveRecord::Base
 	validates_presence_of :first_name, :last_name, :email
 	validates_length_of :password, minimum: 4
 
-	after_save :signup_welcome_notification
+	#after_save :signup_welcome_notification
 
-	private
+	#private
 
-	def signup_welcome_notification
-      UserMailer.signup_welcome(self).deliver
-   	end
+	#def signup_welcome_notification
+    #  UserMailer.signup_welcome(self).deliver
+   	#end
 
 end

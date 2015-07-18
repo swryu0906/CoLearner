@@ -14,13 +14,18 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
 
-     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-     <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
 </head>
 
 <body>
-    
+
+  <!-- Header nav -->
+  <%= render 'layouts/nav' %>
+  
+  
+  <!-- Flash notice --> 
   <% if flash[:notice] %>
   <div id="notice">
     <%= flash[:notice] %> 
@@ -28,25 +33,15 @@
   <% end %>
 
 
-
-<%= yield %>
+  <!-- Main section -->
+  <%= yield %>
     
 
-  <!--  Footer Area-->
-    <div class="footer">
-      <div class="container">
-          <h3>Company</h3>
-          <ul>
-              <li>About</li>
-              <li>Careers</li>
-              <li>Blog</li>
-              <li>Help</li>
-              <li>Policies</li>
-              <li>Terms & Privacy</li>
-        </ul>
-        <p>&copy; 2015 <img src="https://36.media.tumblr.com/59f6145c43c8897ef734255b47091db3/tumblr_nrkgqmk1CF1qlcwy7o1_r1_1280.png" id="logo" /></p>
-      </div>
-    </div>
+  <!-- Footer Area-->
+  <%= render 'layouts/footer' %>
+
+
+  <!-- Script -->    
   <script src="http://s3.amazonaws.com/codecademy-content/projects/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     
