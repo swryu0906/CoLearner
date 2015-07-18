@@ -1,33 +1,36 @@
-<!-- navbar -->
-<%= render 'nav' %>
-<!-- navbar -->
+<div class="container text-center">
+  
+  <%= render 'courses/table' %>
 
-<p id="notice"><%= notice %></p>
 
-<h1>Listing Joins</h1>
+  <h1>Listing Joins</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Event</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @joins.each do |join| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= join.user %></td>
-        <td><%= join.event %></td>
-        <td><%= link_to 'Show', join %></td>
-        <td><%= link_to 'Edit', edit_join_path(join) %></td>
-        <td><%= link_to 'Destroy', join, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>User</th>
+        <th>Event</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @joins.each do |join| %>
+        <tr>
+          <td><%= join.user %></td>
+          <td><%= join.event %></td>
+          <td><%= link_to 'Show', join %></td>
+          <td><%= link_to 'Edit', edit_join_path(join) %></td>
+          <td><%= link_to 'Destroy', join, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Join', new_join_path %>
+  <br>
+
+  <%= link_to 'New Join', new_join_path %>
+  
+</div>
+
+

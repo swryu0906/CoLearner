@@ -1,8 +1,7 @@
 class CoursesController < ApplicationController
-  before_action :set_user 
+  before_action :set_user
   before_action :set_courses
-  before_action :set_course, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_course, except: [:index, :new, :create]
   # GET /courses
   # GET /courses.json
   def index
@@ -64,14 +63,13 @@ class CoursesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      @user = current_user
-    end
-
     def set_courses
       @courses = @user.courses
     end
 
+    def set_user
+      @user = current_user
+    end
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:first_name, :last_name, :email, :description, :image, :password)
