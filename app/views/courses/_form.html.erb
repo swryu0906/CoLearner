@@ -16,12 +16,16 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :category %><br>
-    <%= f.text_field :category %>
+    <%= f.label :category_id, "Category" %><br>
+    <%= f.collection_select(:category_id, Category.all, :id, :name) %>
   </div>
   <div class="field">
     <%= f.label :city_name %><br>
     <%= f.text_field :city_name %>
+  </div>
+   <div class="field">
+    <%= f.label :image %><br>
+    <%= f.text_field :image %>
   </div>
   <div class="field">
     <%= f.label :description %><br>

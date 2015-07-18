@@ -1,33 +1,81 @@
+<div class='container text-center'>
+  <h1>Listing Courses</h1>
 
-<h1>Listing Courses</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Category</th>
-      <th>City name</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-    </thead>
-
-  <tbody>
-    <% @courses.each do |course| %>
+  <table class='table table-hover text-center'>
+    <thead>
       <tr>
-        <td><%= course.name %></td>
-        <td><%= course.category %></td>
-        <td><%= course.city_name %></td>
-        <td><%= course.description %></td>
-        <td><%= link_to 'Show', course %></td>
-        <td><%= link_to 'Edit', edit_course_path(course) %></td>
-        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th class='text-center'>ID</th>
+        <th class='text-center'>Name</th>
+        <th class='text-center'>Category</th>
+        <th class='text-center'>City name</th>
+        <th class='text-center'>Description</th>
+        <th class='text-center' colspan="3"></th>
       </tr>
+      </thead>
+
+    <tbody>
+      <% @courses.each do |course| %>
+        <tr>
+          <td><%= course.id %></td>
+          <td><%= course.name %></td>
+          <td><%= course.category.name %></td>
+          <td><%= course.city_name %></td>
+          <td><%= course.description %></td>
+          <td><%= link_to 'Show', course %></td>
+          <td><%= link_to 'Edit', edit_course_path(course) %></td>
+          <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Course', new_course_path %>
+
+  <div class="courses row">
+    <% @courses.each do |course| %>
+    
+      <div id="course_<%= course.id %>" class="course col-md-4" %>
+        <%= link_to course do %><img src="<%= course.image %>" alt="course_<%= course.id %> image" class="img-responsive img-thumbnail"><% end %>
+        <h4><%= link_to course.name, course %></h4>
+        <p><%= course.category.name %></p>
+        <p><%= course.city_name %></p>
+        <br>
+        <br>
+      </div>
+
     <% end %>
-  </tbody>
-</table>
+  </div>
 
-<br>
+  <!-- Pagination -->
+  <div class="row text-center">
+     <div class="col-lg-12">
+         <ul class="pagination">
+             <li>
+                 <a href="#">&laquo;</a>
+             </li>
+             <li class="active">
+                 <a href="#">1</a>
+             </li>
+             <li>
+                 <a href="#">2</a>
+             </li>
+             <li>
+                 <a href="#">3</a>
+             </li>
+             <li>
+                 <a href="#">4</a>
+             </li>
+             <li>
+                 <a href="#">5</a>
+             </li>
+             <li>
+                 <a href="#">&raquo;</a>
+             </li>
+         </ul>
+     </div>
+  </div>
 
-<%= link_to 'New Course', new_course_path %>
-
+<!-- End of container -->  
+</div>
