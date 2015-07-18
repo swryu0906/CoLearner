@@ -42,6 +42,7 @@ img {
   background: url('https://goo.gl/zryxfz') no-repeat center center;
   background-size: cover;
   height: 500px;
+    margin-top: -170px;
 }
 
 .jumbotron h1 {
@@ -54,18 +55,21 @@ img {
     font-weight: 300;
 }
 
+
 .btn {
   text-decoration: none;
   border-radius: 0px;
   color: #fff;
 }
 
+
 .btn-search {
+    
   background-color: #d00a88;
-    padding: 15px 20px;
+    padding: 9px 20px;
     margin: 0 auto;
-  color: #fff;
-  border: none;
+    color: #fff;
+    border: none;
 }
 
 #btn-how {
@@ -202,4 +206,29 @@ www.racefurniture.com.au/media="all"
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 
+.navbar-default { 
+    background: transparent;
+  background-color: transparent;
+  border-color: transparent;
+    padding-top: 0px;
+}
 
+.navbar-static-top {
+  z-index: 1000;
+  border-width: 0 0 0px;
+    padding-top: 0px;
+}
+
+.navbar {
+    margin: auto;
+}
+
+.container {
+  padding-bottom: 0px;
+  padding-top: 0px;
+  text-align: center;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #CB0E88;
+}
