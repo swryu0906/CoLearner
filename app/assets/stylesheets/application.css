@@ -29,14 +29,6 @@ img {
   font-weight: 700;
 }
 
-.btn-login {
-  background-color: #d00a88;
-  color: #fff;
-  border: none;
-  width: 300px;
-  height: 35px; 
-}
-
 .form-control {
   width: 300px;
   border-radius: 0px;
@@ -65,15 +57,19 @@ img {
 
 #signup-error {
   margin-top: 25px;
+}
+
+#learn {
+  width: 225px;
 } 
 
+/* Button CSS BEGIN */
 
 .btn {
   text-decoration: none;
   border-radius: 0px;
   color: #fff;
 }
-
 
 .btn-search {  
   background-color: #d00a88;
@@ -90,6 +86,19 @@ img {
   color: #fff;
   margin-bottom: 100px;
 }
+
+.btn-login {
+  background-color: #d00a88;
+  color: #fff;
+  border: none;
+  width: 300px;
+  height: 35px; 
+}
+
+/* Button CSS END */
+
+
+/* Jumbotron CSS BEGIN */
 
 .jumbotron {
   text-align: center;
@@ -110,17 +119,70 @@ img {
   font-weight: 300;
 }
 
-
-#learn {
-	width: 225px;
+.jumbotron-about {
+  text-align: center;
+  color: #fff;
+  background: url('https://goo.gl/BdeJuM') no-repeat center center;
+  background-size: cover;
+  height: 300px;
 }
+
+.jumbotron-about h1 {
+  font-weight: 700;
+  margin-top: 100px;
+  text-transform: capitalize;
+  font-size: 50px;
+}
+
+/* Jumbotron CSS END */
+
+.about-head h4 {
+  text-align: center;
+  font-weight: 400;
+  text-transform: capitalize;
+  font-size: 50px;
+}
+
+.container-about p {
+  font-size: 25px;
+  line-height: 50px;
+  font-weight: 100px;
+}
+
+.navbar-default { 
+  background: transparent;
+  background-color: transparent;
+  border-color: transparent;
+  padding-top: 0px;
+}
+
+.navbar-static-top {
+  z-index: 1000;
+  border-width: 0 0 0px;
+  padding-top: 0px;
+}
+
+.navbar {
+  margin: auto;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #CB0E88;
+}
+
+
+/* Footer CSS BEGIN */
 
 .footer {
   background-image: url('https://goo.gl/9tlO25');
   color: #fff;
   padding: 40px 0 20px 0;
   text-align: center;
-    height: 300px;
+  height: 300px;
+}
+
+.footer img {
+  height: 20px;
 }
 
 .footer h3 {
@@ -142,64 +204,4 @@ img {
   margin: 10px;
 }
 
-
-.jumbotron-about {
-  text-align: center;
-  color: #fff;
-  background: url('https://goo.gl/BdeJuM') no-repeat center center;
-  background-size: cover;
-  height: 300px;
-}
-
-.jumbotron-about h1 {
-  font-weight: 700;
-  margin-top: 100px;
-  text-transform: capitalize;
-  font-size: 50px;
-}
-
-.about-head h4 {
-  text-align: center;
-  font-weight: 400;
-  text-transform: capitalize;
-  font-size: 50px;
-}
-
-.container-about p {
-  font-size: 25px;
-  line-height: 50px;
-  font-weight: 100px;
-}
-
-.container {
-  padding-bottom: 50px;
-  padding-top: 20px;
-  text-align: center;
-}
-
-.navbar-default { 
-  background: transparent;
-  background-color: transparent;
-  border-color: transparent;
-  padding-top: 0px;
-}
-
-.navbar-static-top {
-  z-index: 1000;
-  border-width: 0 0 0px;
-  padding-top: 0px;
-}
-
-.navbar {
-  margin: auto;
-}
-
-.container {
-  padding-bottom: 0px;
-  padding-top: 0px;
-  text-align: center;
-}
-
-.navbar-default .navbar-nav > li > a {
-  color: #CB0E88;
-}
+/* Footer CSS END */
