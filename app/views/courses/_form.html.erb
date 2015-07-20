@@ -12,26 +12,22 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :placeholder => "Course Name", :class => "form-control"  %>
   </div>
   <div class="field">
-    <%= f.label :category_id, "Category" %><br>
+    <%= f.label :category %><br>
     <%= f.collection_select(:category_id, Category.all, :id, :name) %>
   </div>
   <div class="field">
-    <%= f.label :city_name %><br>
-    <%= f.text_field :city_name %>
+    <%= f.text_field :city_name, :placeholder => "City Name", :class => "form-control"  %>
   </div>
    <div class="field">
-    <%= f.label :image %><br>
-    <%= f.text_field :image %>
+    <%= f.text_field :image, :placeholder => "Your Image", :class => "form-control"  %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, :placeholder => "Description", :class => "form-control"  %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Create Course", class: "btn-login"  %>
   </div>
 <% end %>
