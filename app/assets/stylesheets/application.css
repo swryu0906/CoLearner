@@ -74,20 +74,20 @@ img {
 }
 
 
-.btn-search {
-    
+.btn-search {  
   background-color: #d00a88;
-    padding: 9px 20px;
-    margin: 0 auto;
-    color: #fff;
-    border: none;
+  padding: 7px 20px;
+  margin: 0 auto;
+  color: #fff;
+  border: none;
 }
 
 #btn-how {
   border: none;
-  padding: 19px 10px;
-  background: rgba(255, 255, 255, .4);
+  padding: 10px 5px;
+  background: rgba(255, 255, 255, .7);
   color: #fff;
+  margin-bottom: 100px;
 }
 
 /* body {
