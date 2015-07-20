@@ -3,9 +3,13 @@
 	<div class="container">
 		<div class="login">
 			<%= form_for(:session, url: login_path) do |f| %>
-				<%= f.email_field :email, :placeholder => "Enter your email" %> <br>
-				<%= f.password_field :password, :placeholder => "Enter password" %> <br>
-				<%= f.submit "Login", :class => "btn-login" %>
+			  <div class="field">
+			    <%= f.text_field :email, :placeholder => "Email Address", :class => "form-control" %>
+			  </div>
+			  <div class="field">
+			    <%= f.password_field :password, :placeholder => "Password", :class => "form-control" %>
+			  </div>
+			  <%= f.submit "Log in", class: "btn-login" %>
 			<% end %>
 		</div>
 	</div>
