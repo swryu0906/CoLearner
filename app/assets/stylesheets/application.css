@@ -36,6 +36,10 @@ img {
   text-align: left;
 }
 
+.form-inline {
+  margin-top: 100px;
+}
+
 .login-form {
   padding: 30px;
   margin: auto;
@@ -81,10 +85,14 @@ img {
 
 #btn-how {
   border: none;
-  padding: 10px 5px;
+  padding: 15px 10px;
   background: rgba(255, 255, 255, .7);
   color: #fff;
-  margin-bottom: 100px;
+}
+
+#btn-how:hover {
+  color: #d00a88;
+  text-decoration: none;
 }
 
 .btn-login {
@@ -117,6 +125,7 @@ img {
 
 .jumbotron p {
   font-weight: 300;
+  margin-bottom: 25px;
 }
 
 .jumbotron-about {
