@@ -36,11 +36,11 @@ class UsersController < ApplicationController
 
     @user = User.new(user_params)
     respond_to do |format|
-      flash[:notice] = "Congratulation, you have created a new user account successfully!"
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to @user, notice: 'You have successfully created a new account' }
         format.json { render :show, status: :created, location: @user }
       else
+        flash[:notice] = "Uh oh, looks like you failed to create a new account. Please try again."
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
